@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Svg</title>
+<style type="text/css" media="all">
+
+
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+#box{
+    width: 200px;
+    position: relative;
+}
+
+#login{
+    text-align: center;
+    animation: login linear infinite;
+}
+@keyframes login{
+    50%{
+        opacity: 0.4;
+    }
+}
+
+#triangulo{
+    stroke-dasharray: 17;
+    
+    animation: tri cubic-bezier(0.35,0.04,0.63, 0.95) infinite;
+}
+@keyframes tri {
+    0%{
+        stroke-dashoffset: 0;
+    }100%{
+        stroke-dashoffset: 136;
+    }
+}
+
+#r{
+    margin-left: 35px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="box" >
+    
+    <svg id="triangulo">
+        
+    <polyline points="100,1 150,100 50,100 100,1" style="fill:black;stroke:white;stroke-width:2">
+    
+    
+    </svg>
+        
+    <h3 id="login">Login...</h3>
+
+
+
+    <input type="range" name="vel" id="r" value="1" min="0" max="10" />
+
+
+</div>
+
+<script src="triangulo.js"></script>
+</body>
+</html>

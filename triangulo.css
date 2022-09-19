@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+#box{
+    width: 200px;
+    position: relative;
+}
+
+#login{
+    text-align: center;
+    animation: login linear infinite;
+}
+@keyframes login{
+    50%{
+        opacity: 0.4;
+    }
+}
+
+#triangulo{
+    stroke-dasharray: 17;
+    
+    animation: tri cubic-bezier(0.35,0.04,0.63, 0.95) infinite;
+}
+@keyframes tri {
+    0%{
+        stroke-dashoffset: 0;
+    }100%{
+        stroke-dashoffset: 136;
+    }
+}
+
+#r{
+    margin-left: 35px;
+}
